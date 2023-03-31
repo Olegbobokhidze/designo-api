@@ -5,6 +5,7 @@ import bodyParser from "body-parser";
 import cors from "cors";
 import {
   getAllProject,
+  getAppProjects,
   getGraphicProjects,
   getWebProjects,
 } from "./controllers/project-controller.js";
@@ -22,8 +23,6 @@ app.get("/", (req, res) => {
 
 app.get("/api/projects", getAllProject);
 app.get("/api/projects/web", getWebProjects);
+app.get("/api/projects/app", getAppProjects);
 app.get("/api/projects/graphic", getGraphicProjects);
 app.listen(3000);
-
-//oleg123 olegbobokhidze
-// mongodb+srv://olegbobokhidze:<password>@cluster0.eapo62e.mongodb.net/?retryWrites=true&w=majority
