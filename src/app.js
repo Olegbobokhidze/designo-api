@@ -1,5 +1,5 @@
 import express from "express";
-import connect from "./src/database/mongo.js";
+import connect from "./database/mongo.js";
 import dotenv from "dotenv";
 import bodyParser from "body-parser";
 import cors from "cors";
@@ -8,7 +8,7 @@ import {
   getAppProjects,
   getGraphicProjects,
   getWebProjects,
-} from "./src/controllers/project-controller.js";
+} from "./controllers/project-controller.js";
 
 dotenv.config();
 connect();
